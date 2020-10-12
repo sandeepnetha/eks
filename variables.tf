@@ -5,6 +5,7 @@ variable "region" {
 }
 variable "clustername"{
   type    = string
+  default ="cluster"
 }
 variable "vpc_id" {
   type        = string
@@ -207,6 +208,7 @@ variable "wait_for_capacity_timeout" {
 variable "instance_type" {
   type        = list(string)
   description = "Instance type to launch"
+  default     ="[t3.micro]"
 }
 variable "ec2_ssh_key" {
   type = string
